@@ -1,0 +1,123 @@
+@import "./weui.scss";
+
+page {
+  background-color: #F8F8F8;
+  height: 100%;
+  font-size: 32px;
+  line-height: 1.6;
+}
+.header-title {
+  height: 90px;
+  text-align: center;
+}
+.header-title-text {
+  height: 90px;
+  line-height: 90px;
+  font-size: 60px
+}
+.page-body{
+  padding-top: 10px;
+}
+.page-section{
+  width: 100%;
+  margin-bottom: 60px;
+}
+.page-section_center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-section:last-child{
+  margin-bottom: 0;
+}
+.page-section-gap{
+  box-sizing: border-box;
+  padding: 0 30px;
+}
+.page-section-spacing{
+  box-sizing: border-box;
+}
+.page-section-title{
+  font-size: 28px;
+  color: #999999;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.page-section-gap .page-section-title{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.demo-text-1{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #1AAD19;
+  color: #FFFFFF;
+  font-size: 36px;
+}
+// .demo-text-1:before{
+//   content: 'A';
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
+.demo-text-2{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #2782D7;
+  color: #FFFFFF;
+  font-size: 36px;
+}
+// .demo-text-2:before{
+//   content: 'B';
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
+.demo-text-3{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #F1F1F1;
+  color: #353535;
+  font-size: 36px;
+}
+// .demo-text-3:before{
+//   content: 'C';
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
+
+button{
+  margin-bottom: 30px;
+}
+button:last-child{
+  margin-bottom: 0;
+}
+.page-section-title{
+  padding: 0;
+}
+.swiper-item{
+  display: block;
+  height: 100%;
+}
+.page-section-title{
+  margin-top: 60px;
+  position: relative;
+}
+.info{
+  position: absolute;
+  right: 0;
+  color: #353535;
+  font-size: 30px;
+}
+.page-foot{
+  margin-top: 50px;
+}
