@@ -1,30 +1,16 @@
-import { Component } from 'react';
+import {Component} from 'react';
 import { View, Swiper, SwiperItem, Text } from '@tarojs/components';
-import {Tabs} from 'antd';
-// import { AtTabs, AtTabsPane } from 'taro-ui';
+import { AtTabs, AtTabsPane } from 'taro-ui';
 import './index.scss';
 
-const { TabPane } = Tabs;
-
 export default class Index extends Component {
+
   constructor(props) {
     super(props)
     this.state = {
       background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
-      tabsType:[
-        {
-          id:0,
-          data:'新概念一'
-        },
-        {
-          id:1,
-          data:'书虫'
-        },
-        {
-          id:2,
-          data:'美国亲子英语'
-        }
-      ],
+      tabsType:[{title:'新概念一',id:'00'},{title:'书虫',id:'01'},{title:'美国亲子英语',id:'02'}],
+      currentTab:'00',
       swiperConfig: {
         indicatorDots: true,
         vertical: false,
@@ -39,16 +25,11 @@ export default class Index extends Component {
 
   }
 
-  componentWillMount() { }
-
-  componentDidMount() { }
-
-  componentWillUnmount() { }
-
-  componentDidShow() { }
-
-  componentDidHide() { }
-
+  handleChangeTab = (value) => {
+    this.setState({
+      currentTab:value
+    })
+  }
 
   render() {
     return (
@@ -70,15 +51,15 @@ export default class Index extends Component {
           </View>
         </View>
         <View>
-          <Tabs defaultActiveKey='0' >
+          <AtTabs current={this.state.currentTab} tabList={this.state.tabsType} onClick={this.handleChangeTab}>
             {
               this.state.tabsType.map(item => (
-                <TabPane tab={item.data} key={item.id}>
-                  <View>{item.data}</View>
-                </TabPane>
+                <AtTabsPane  current={this.state.currentTab} key={`tab_${item.id}`} index={item.id}>
+                  <View>{item.title}</View>
+                </AtTabsPane>
               ))
             }
-          </Tabs>
+          </AtTabs>
         </View>
       </View>
     )
